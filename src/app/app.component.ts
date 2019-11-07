@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'code-clicker';
+  linesOfCode = 0;
+  betterLoCMulti = 1;
+  betterLoCNeeded = 10;
+
+  click() {
+    this.linesOfCode += this.betterLoCMulti;
+  }
+  betterLoC() {
+    this.betterLoCMulti++;
+    this.linesOfCode -= this.betterLoCNeeded;
+    this.betterLoCNeeded *= 2;
+  }
 }
